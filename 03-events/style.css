@@ -6,11 +6,16 @@
 .btn {
   padding: .5em 1em;
   border-radius: 4px;
-  background-color: lightblue;
+  background-color: red;
   text-decoration: none;
   color:  white;
 }
+ 
 
-.active {
+.btn-active {
+  background-color: rgb(11, 187, 34);
+}
+.random-numbers {
+  background-color: rgb(255, 251, 251);
   color: blue;
 }

@@ -1,40 +1,55 @@
-# javascript-DOM-events
+# Events
 
-DOM is the tree of HTML elements created by the browser in order to show the html page
+Events are everywhere in our web pages
+We use `addEventListener` on a DOM element to do something (callback function)
+if a certain event happens
 
-## Selecting Elements
+[HTML DOM EVENTS](https://developer.mozilla.org/en-US/docs/Web/Events)
+```
+DOMContentLoaded  # document
+blur              # input / textarea
+click             # any visible element
+change            # select
+focus             # any visible element
+keyup             # window / any focused element
+mouseover         # any visible element
+resize            # window
+scroll            # window / any scrollable element
+submit            # form
+touchstart        # for mobile devices
+```
+
+## how to react to an event
+
+[addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 ```javascript
 const element = document.querySelector('CSS_SELECTOR');
-// element is now a Object of the DOM
-const multipleElements = document.querySelectorAll('CSS_SELECTOR');
-// multipleElements is now a nodeList of elements
-element.insertAdjacentHTML('beforeend', '<tag>content</tag>'); // adds HTML to content
+element.addEventListener(eventType, (event) => {
+  // Do something (callback)
+});
 ```
 
+### current target
 
-## How to import the assignment
-To start the exercises
-1. go in your **code** folder `cd ~/code`
-2. go inside your github username folder with `cd your_github_username`
-3. `git clone paste_here_ssh_link_to_your_assignment`
-4. go inside the repo you've just cloned `cd js-DOM-events-your-github-username` (`if` you press `cd` + `tab` it will be easier)
-5. go inside the exercise folder `cd 01-select-element`
-6. open VS_CODE `code .`
+[Event.currentTarget](https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget)
 
-## how to test the code
-1. print values and messages to understand what the code is doing
-  ```javascript
-  cosole.log()
-  ```
-2. run the programm
-open the `index.html` file in your browser
-
-## how to save your changes
-Every time you complete an exercise remember to
-```zsh
-git add .
-git commit -m "exercise # done"
-git push origin master
+```javascript
+const btn = document.querySelector('a');
+btn.addEventListener('click', (event) => {
+  console.log(event);
+  console.log(event.currentTarget);
+});
 ```
 
-Good Hacking :rocket:
+if we have multiple elements and we want to toggle a class
+
+```javascript
+const buttons = document.querySelectorAll('a');
+buttons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    console.log(event);
+    console.log(event.currentTarget);
+    event.currentTarget.classList.toggle("active");
+  });
+});
+```
