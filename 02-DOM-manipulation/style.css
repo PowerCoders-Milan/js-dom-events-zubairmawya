@@ -1,3 +1,9 @@
 .blue {
+  background-color: tan;
   color: blue;
+
+}
+tbody {
+  background-color: seagreen ;
+  color: rgb(248, 232, 14);
 }
