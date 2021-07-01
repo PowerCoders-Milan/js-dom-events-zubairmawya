@@ -4,18 +4,42 @@
 }
 
 .btn {
-  padding: .5em 1em;
-  border-radius: 4px;
+  padding: .9em 2em;
+  border-radius: 34px;
   background-color: red;
   text-decoration: none;
-  color:  white;
+  color:  rgb(255, 255, 255);
+  border-style: double;
+  border-color: rgb(7, 175, 161);
+  border-width: 9px;
 }
  
 
 .btn-active {
-  background-color: rgb(11, 187, 34);
+  background-color: rgb(8, 155, 27);
+  padding: .4em 1em;
+  padding-block-start: 5em 1em;
 }
 .random-numbers {
-  background-color: rgb(255, 251, 251);
-  color: blue;
+  background-color: rgb(192, 120, 120);
+  color: rgb(1, 1, 97);
+  text-align: center;
+border-radius: 3em;
+border-left-style: dotted;
+text-decoration-style: dashed;
+border-left-style: solid;
+border-left-color: lawngreen;
+border-right-style: solid;
+border-right-color: lawngreen;
+border-bottom-style: ridge;
+border-top-color: rgb(17, 11, 11);
+border-top-style: ridge;
+border-bottom-color: indigo;
+border-width: 24px;
+border-bottom-width: 16px;
+border-top-width: 10px;
+white-space: inherit;
+}
+body {
+  background-color: rgba(192, 166, 127, 0.384);
 }
